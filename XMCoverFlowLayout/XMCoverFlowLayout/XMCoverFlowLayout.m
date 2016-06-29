@@ -43,7 +43,6 @@
         [yoffset replaceObjectAtIndex:colum withObject:@(height)];
         colum = colum >= (_numberOfColum - 1)?0: ++colum;
     }
-    
 }
 
 - (CGSize)collectionViewContentSize
@@ -62,11 +61,16 @@
     for (int i = 0; i < self.attributesArray.count; i++) {
         if (CGRectIntersectsRect([self.attributesArray[i] frame], rect)) {
             [layoutAttributes addObject:self.attributesArray[i]];
+//            [self layoutAttributesForItemAtIndexPath:nil];
         }
     }
     return layoutAttributes;
 }
 
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return  nil;
+}
 - (NSMutableArray *)attributesArray
 {
     if (!_attributesArray) {

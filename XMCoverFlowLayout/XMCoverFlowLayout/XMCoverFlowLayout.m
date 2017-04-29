@@ -13,7 +13,7 @@
 
 - (void)prepareLayout
 {
-    //在要展示的时候计算好cell 高度，可以提高滑动性能
+    //在要展示的时候计算好cell 高度，可以提高滑动性能,小数据量的可以这样配置
     float columWidth = (SREENWIDTH -40)/_numberOfColum;
     NSMutableArray * xoffset = [NSMutableArray new];
     for (int i = 0; i < _numberOfColum; i ++) {
@@ -49,11 +49,6 @@
 {
     return CGSizeMake(SREENWIDTH/_numberOfColum, _contentHeight);
 }
-
-//- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return nil;
-//}
 
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
 {

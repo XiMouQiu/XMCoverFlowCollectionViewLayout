@@ -32,6 +32,8 @@
     layout.cellPadding = 10;
     [self.collectionView setCollectionViewLayout:layout];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XMCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:@"XMCollectionViewCell"];
+    [[NSRunLoop currentRunLoop] addTimer:nil forMode:NSDefaultRunLoopMode];
+    NSLog(@"this is test git command");
 }
 
 - (void)didReceiveMemoryWarning {
